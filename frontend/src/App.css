@@ -1,0 +1,952 @@
+/* src/App.css */
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  transition: background-color 0.3s ease;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: cover;
+}
+
+/* App.css */
+header {
+  background-color: #050505;
+  color: rgb(228, 233, 222);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  opacity: 0; /* Ensure opacity is 0 initially */
+  transform: translateY(20px); /* Start with translateY */
+  animation: fadeInUp 0.6s ease-in-out forwards; /* 'forwards' ensures final state is retained */
+}
+
+
+.header-image {
+  width: 150px; /* Adjust the size as needed */
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  color: rgb(38, 188, 226);
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.2rem;
+}
+
+.navbar a:hover {
+  color: #e1b20a;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-title {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(233, 154, 209);
+  min-width: 160px;
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.2);
+
+}
+
+.dropdown-content a {
+  color: rgb(0, 0, 0);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #efeff5;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.header-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.header-icons .icon {
+  color: rgb(241, 17, 223);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.header-icons .icon:hover {
+  color: #eba8e7;
+}
+
+
+
+/* Home.css */
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Full height of the viewport */
+  text-align: center; /* Center the text */
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-top: 300px;
+  margin-left: 700px;
+}
+
+section p {
+  font-size: 1.2rem;
+  margin-left: 750px;
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Categories Page Styles */
+/* Header and Dropdown */
+.navbar {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  background-color: #333;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navbar a:hover {
+  background-color: #555;
+}
+
+
+.dropdown-title {
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Categories Page */
+.categories-page {
+  text-align: center;
+  padding: 20px;
+}
+
+.categories-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.category-item {
+  text-decoration: none;
+  color: black;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.category-item:hover {
+  transform: scale(1.05);
+}
+
+.category-item img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.category-item h3 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+/* VegetablesFruits.css */
+.category-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.product-item h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.product-item p {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+.product-item button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-item button:hover {
+  background-color: #0056b3;
+}
+
+/* Favorite (Heart) Icon */
+.favorite-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #ff0000; /* Red color for the heart icon */
+  cursor: pointer;
+}
+
+.favorite-icon:hover {
+  color: #ff6666; /* Lighter red on hover */
+}
+
+/* Add to VegetablesFruits.css */
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between; /* Positions the buttons side by side */
+  gap: 10px;
+}
+
+.add-to-cart-btn,
+.buy-now-btn {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100px; /* Set a width for uniformity */
+}
+
+.add-to-cart-btn:hover,
+.buy-now-btn:hover {
+  background-color: #0056b3;
+}
+
+.buy-now-btn {
+  background-color: #28a745; /* Green color for Buy Now */
+}
+
+.buy-now-btn:hover {
+  background-color: #218838;
+}
+
+
+/* Beverages.css */
+.category-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.product-item h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.product-item p {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.product-item button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-item button:hover {
+  background-color: #0056b3;
+}
+.action-buttons {
+  margin-top: 10px;
+}
+
+.add-to-cart-btn, .buy-now-btn {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-to-cart-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.buy-now-btn {
+  background-color: #2196F3;
+  color: white;
+}
+
+/* DairyProducts.css */
+.category-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.product-item h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.product-item p {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.product-item button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-item button:hover {
+  background-color: #0056b3;
+}
+.action-buttons {
+  margin-top: 10px;
+}
+
+.add-to-cart-btn, .buy-now-btn {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-to-cart-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.buy-now-btn {
+  background-color: #2196F3;
+  color: white;
+}
+
+/* PantryProducts.css */
+.category-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.product-item h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.product-item p {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.product-item button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-item button:hover {
+  background-color: #0056b3;
+}
+.action-buttons {
+  margin-top: 10px;
+}
+
+.add-to-cart-btn, .buy-now-btn {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-to-cart-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.buy-now-btn {
+  background-color: #2196F3;
+  color: white;
+}
+
+
+/* SnacksProducts.css */
+.category-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  
+}
+
+.product-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.product-item h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.product-item p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  
+}
+
+.product-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.product-item button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-item button:hover {
+  background-color: #0056b3;
+}
+
+.action-buttons {
+  margin-top: 10px;
+}
+
+.add-to-cart-btn, .buy-now-btn {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-to-cart-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.buy-now-btn {
+  background-color: #2196F3;
+  color: white;
+}
+
+
+/* FeaturedProducts.css */
+.featured-products-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  min-height: 100px; /* Ensure the container takes up the full viewport height */
+}
+
+.featured-products-header {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.products-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items horizontally */
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.6s ease-in-out; /* Apply the fade-in animation */
+}
+
+
+.product-card img {
+  width: 100%;
+  height: auto;
+}
+
+.product-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.product-card p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.product-card button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+.product-card button:hover {
+  background-color: #0056b3;
+}
+/* Buttons Container */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+  padding: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #218838;
+}
+
+/* Buy Now Button */
+.buy-now-btn {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-now-btn:hover {
+  background-color: #0056b3;
+}
+
+
+
+/* PopularBrands.css */
+.popular-brands-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.brand-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.brand-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.brand-item:hover {
+  transform: translateY(-5px);
+}
+
+.brand-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.brand-item h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+
+/* About Us and Contact Us Page Styles */
+/* AboutUs.css */
+
+.about-container {
+  display: flex;
+  align-items: center; /* Vertically align content */
+  justify-content: center; /* Optionally, center horizontally */
+  gap: 20px; /* Space between image and text */
+  padding: 100px;
+}
+
+
+.about-text {
+  max-width: 1200px; /* Limit the width of the text area */
+  padding-left: 100px;
+  font-size: x-large;
+}
+
+.about-text h2, .about-text h3 {
+  margin-top: 50px;
+}
+
+.about-text p, .about-text ul {
+  margin: 20px 0;
+}
+
+.about-text ul {
+  padding-left: 60px; /* Space for bullet points */
+}
+
+@media (max-width: 100px) {
+  .about-container {
+    flex-direction: column; /* Stack the image and text vertically on smaller screens */
+    text-align: center;
+  }
+
+  .about-image img {
+    margin-bottom: 40px; /* Space between the image and text on small screens */
+  }
+}
+
+/*contact form*/
+.contact-us-container {
+  display: flex;
+  justify-content: flex-start; /* Ensures the map and form are aligned at the start */
+  padding: 20px;
+  align-items: flex-start;
+  gap: 0; /* No gap between map and form */
+}
+
+.map-container {
+  flex: 1;
+  margin-right: 0; /* Removes any margin between the map and form */
+  max-width: 50%; /* Adjust map width to fit the layout */
+}
+
+.form-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid #ddd; /* Border around the entire form */
+  border-radius: 8px; /* Rounded corners */
+  padding: 25px; /* Padding inside the border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: #d8b7b7; /* Background color for contrast */
+  max-width: 50%; /* Adjust form width to fit the layout */
+}
+
+.contact-form {
+  width: 100%; /* Form now takes up full width of the container */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.about-page {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1 {
+  color: #e9dcdc;
+}
+
+h2 {
+  color: #121111;
+  margin-top: 20px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+ul {
+  margin-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}

@@ -1,0 +1,169 @@
+.customizer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    max-width: 1200px; /* Limit overall width */
+    margin: 200px 380px; /* Center the container */
+}
+
+.customizer-controls {
+    border: 2px solid #000; /* Solid border for controls */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 400px; /* Limit width for controls */
+    padding: 20px; /* Increased padding for inner spacing */
+    background-color: #ffffff; /* White background for controls */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin: -80px 0px;
+    transition: transform 0.3s; /* Add transition for scaling */
+}
+
+.customizer-controls:hover {
+    transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+.customizer-controls input[type="color"] {
+    cursor: pointer; /* Change cursor to pointer for color input */
+    padding: 0; /* Remove padding for a cleaner look */
+    width: 40px; /* Adjust width for better usability */
+    height: 40px; /* Adjust height for better usability */
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+    border-radius: 50%; /* Make it circular */
+    transition: border 0.3s, transform 0.3s; /* Transition for border and scale */
+}
+
+.customizer-controls input[type="color"]:hover {
+    border: 2px solid #007bff; /* Highlight border on hover */
+    transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+.customizer-controls input,
+.customizer-controls select,
+.customizer-controls button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: all 0.3s;
+    font-size: 16px; /* Consistent font size */
+}
+
+.customizer-controls input:focus,
+.customizer-controls select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.customizer-controls button {
+    transition: background-color 0.3s, transform 0.3s; /* Button transition */
+}
+
+.customizer-controls button:hover {
+    background-color: #0056b3;
+    color: #fff;
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.customizer-shirt-container {
+    position: relative;
+    border: 2px solid #000; 
+    width: 300px; 
+    height: 400px; 
+    background-color: #fff;
+    overflow: hidden; /* Hide overflow for better appearance */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Increased shadow for depth */
+    margin: 0 20px; /* Margin for spacing between controls and preview */
+    transition: transform 0.3s; /* Transition for scaling */
+}
+
+.customizer-shirt-container:hover {
+    transform: scale(1.02); /* Slightly scale up on hover */
+}
+
+.customizer-shirt-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.drag-handle {
+    width: 20px; 
+    height: 20px; 
+    background-color: #007bff; 
+    border-radius: 50%; 
+    cursor: grab; 
+    position: absolute; 
+    top: -10px; 
+    left: calc(50% - 10px); 
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+.drag-handle:hover {
+    background-color: #0056b3; 
+    transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+.customizer-text {
+    transition: transform 0.3s, color 0.3s;
+    color: inherit; /* Inherit color from parent */
+}
+
+.customizer-text:hover {
+    transform: scale(1.05);
+    color: #007bff; /* Change color on hover */
+}
+
+.clear-button {
+    background-color: #dc3545; /* Bootstrap danger color */
+    color: white;
+    border: none; /* No border for clear button */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s, transform 0.3s; /* Transition for button */
+}
+
+.clear-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+h1 {
+    font-size: 26px; /* Larger font for headings */
+    margin-bottom: 20px; /* Spacing below the heading */
+    color: #333; /* Darker color for better readability */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+h3 {
+    margin-top: 20px; /* Spacing above section titles */
+    margin-bottom: 10px; /* Spacing below section titles */
+    color: #555; /* Slightly lighter color for section titles */
+}
+
+button {
+    cursor: pointer; /* Pointer cursor for all buttons */
+}
+
+@media (max-width: 768px) {
+    .customizer-container {
+        flex-direction: column; /* Stack on smaller screens */
+        align-items: center;
+    }
+
+    .customizer-controls {
+        width: 100%; /* Full width on mobile */
+        margin: 0; /* Reset margin */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .customizer-shirt-container {
+        margin-bottom: 20px; /* Spacing below shirt container */
+    }
+
+    h1 {
+        font-size: 22px; /* Adjust heading size for mobile */
+    }
+}
